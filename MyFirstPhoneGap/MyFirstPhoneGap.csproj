@@ -57,7 +57,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="config.xml" />
     <Content Include="CSS\Main.css" />
+    <Content Include="IMG\icon.png" />
+    <Content Include="IMG\splash.png" />
     <Content Include="PhoneGapAPP.html" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -73,7 +76,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="IMG\" />
     <Folder Include="JS\" />
   </ItemGroup>
   <PropertyGroup>
