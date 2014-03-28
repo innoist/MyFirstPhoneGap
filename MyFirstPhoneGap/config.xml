@@ -16,7 +16,7 @@
 		Syed Usman
     </author>
 
-    <preference name="phonegap-version" value="2.9.1" />
+    <preference name="phonegap-version" value="2.9.0" />
     <preference name="webviewbounce" value="false" />
 			
     <icon src="img/icon.png" />
