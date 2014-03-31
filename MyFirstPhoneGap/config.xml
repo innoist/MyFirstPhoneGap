@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.example.pgbuild2"
+        id        = "com.usman.pgbuild2"
   
-        version   = "2.9.1">
+        version   = "2.9.0">
 
     <!-- versionCode is optional and Android only -->
 
@@ -21,7 +21,7 @@
       <feature name="Notification">
         <param name="android-package" value="org.apache.cordova.Notification"/>
       </feature>
-    <preference name="phonegap-version" value="2.9.1" />
+    <preference name="phonegap-version" value="2.9.0" />
     <!--<preference name="webviewbounce" value="false" />--><!--
 			
     <icon src="img/icon.png" />
