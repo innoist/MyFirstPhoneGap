@@ -11,7 +11,7 @@
 
     
     <script src="JS/jquery.mobile-1.4.2.js" type="text/javascript"></script>
-    <!--<script src="cordova.js" type="text/javascript"></script>-->
+    <script src="phonegap.js" type="text/javascript"></script>
 
 </head>
 <body>
@@ -48,8 +48,8 @@
             <a href="#"  id="alert" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-icon-home ui-btn-icon-left" >alert</a>
             <a href="#"  id="confirm" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-icon-grid ui-btn-icon-left" data-rel="dialog">confirm</a>
             <a href="#" id="prompt" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-icon-search ui-btn-icon-left" data-rel="dialog">prompt</a>
-            <a href="#options" id="beep" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-icon-grid ui-btn-icon-left" data-rel="dialog">beep</a>
-            <a href="#search" id="vibrate" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-icon-search ui-btn-icon-left" data-rel="dialog">Vibrate</a>
+            <a href="#" id="beep" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-icon-grid ui-btn-icon-left" data-rel="dialog">beep</a>
+            <a href="#" id="vibrate" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-icon-search ui-btn-icon-left" data-rel="dialog">Vibrate</a>
             <a href="#main">Go Back</a>
         </div>
 
@@ -62,14 +62,34 @@
             $("#alert").bind("tap", function () {
                 navigator.notification.alert("Phone GAP SDK Alert", AlertCallBack, "Alert Section", "Ok PhoneGap")
             });
+            document.addEventListener("deviceready", onDeviceReady, false);
             $("#confirm").bind("tap", function () {
-                navigator.notification.confirm("Phone GAP SDK confirm", AlertCallBack, "Alert Section", "Ok PhoneGap")
+
+   //             navigator.notification.confirm(
+   //    'You are the winner!', // message
+   //     AlertCallBack,            // callback to invoke with index of button pressed
+   //    'Game Over',           // title
+   //    'Restart,Exit'         // buttonLabels
+   //);
             });
+            $("#beep").bind("tap", function () {
+                navigator.notification.beep(2);
+            });
+            
             $("#prompt").bind("tap", function () {
                 navigator.notification.prompt("Phone GAP SDK confirm", AlertCallBack, "Alert Section", "Ok PhoneGap", "default text")
             });
+            $("#vibrate").bind("tap", function () {
+                navigator.notification.vibrate(10)
+            });
+
+        
         });
         function AlertCallBack(a) {
+        }
+        function onDeviceReady() {
+
+           
         }
     </script>
 </body>
